@@ -42,7 +42,7 @@ module StaticMap
     def save
       raise "Please set the path argument to save the image" unless @path
 
-      File.open(@path, "w") { |f| f.write(file.read) }
+      File.open(@path, "w:UTF-8") { |f| f.write(file.read) }
     end
 
     def file
